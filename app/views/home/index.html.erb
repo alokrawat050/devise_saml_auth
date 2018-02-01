@@ -1,0 +1,18 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% if !user_signed_in? %>
+    <%= link_to  new_user_session_path do %>
+        <span class="fa fa-key">&nbsp;login</span>
+    <% end %>
+<% else %>
+    <p>Logged In Successfully.</p>
+    <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'ログアウトします。よろしいでしょうか？' }  do %>
+    <%#= link_to sign_out_path, data: { confirm: 'ログアウトします。よろしいでしょうか？' }  do %>
+        <span class="fa fa-sign-out">&nbsp;Log Out</span>
+    <% end %>
+<% end %>
+
+<%#= link_to  new_user_registration_path do %>
+    <!-- <span class="fa fa-key">&nbsp;New Registration</span> -->
+<%# end %>
