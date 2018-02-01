@@ -320,15 +320,11 @@ Devise.setup do |config|
       settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
       settings.issuer                             = "http://localhost:3000/users/saml/metadata"
       settings.authn_context                      = ""
-      settings.idp_slo_target_url                 = "" # "http://localhost/simplesaml/www/saml2/idp/SingleLogoutService.php"
-      
-      #line configuration
-      settings.idp_sso_target_url                 = "https://auth.worksmobile.com/saml2/idp/vebuin.com"
-      settings.idp_cert_fingerprint               = '5F:B3:E8:70:0E:93:B9:42:59:23:3C:39:B4:60:47:72:7D:D4:45:B0:B9:6A:87:A0:9A:F7:B4:C0:41:5F:6A:52'
-      
+      settings.idp_slo_target_url                 = ""
+            
       #okta configuration
-      # settings.idp_sso_target_url                 = "https://vebuin.okta.com/app/vebuin_samlapp_1/exkmd8xrhpCyBgH2m2p6/sso/saml" # "http://localhost/simplesaml/www/saml2/idp/SSOService.php"
-      # settings.idp_cert_fingerprint               = '09:DB:8F:2A:A6:E0:04:46:56:CE:79:F2:F3:EE:FE:21:0C:8D:71:39:E0:73:4D:EF:02:9F:47:7F:1B:EC:A6:AA'
+      settings.idp_sso_target_url                 = "your target url"
+      settings.idp_cert_fingerprint               = 'your SHA256 Fingerprint key set here'
       settings.idp_cert_fingerprint_algorithm     = 'http://www.w3.org/2000/09/xmldsig#sha256'
     end
 end
