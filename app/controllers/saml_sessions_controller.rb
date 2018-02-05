@@ -1,5 +1,5 @@
 class SamlSessionsController < Devise::SamlSessionsController
-    after_action :store_winning_strategy, only: :create
+    #after_action :store_winning_strategy, only: :create
 
     private
 

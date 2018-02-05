@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   def setUserID
     if self.user_id.nil?
-      self.user_id = "999986"
+      self.user_id = "999987"
     end
   end
 
