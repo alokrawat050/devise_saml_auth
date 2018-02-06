@@ -315,17 +315,16 @@ Devise.setup do |config|
     # Configure with your SAML settings (see ruby-saml's README for more information: https://github.com/onelogin/ruby-saml).
     config.saml_configure do |settings|
       # assertion_consumer_service_url is required starting with ruby-saml 1.4.3: https://github.com/onelogin/ruby-saml#updating-from-142-to-143
-      settings.assertion_consumer_service_url     = "http://localhost:3000/users/saml/auth"      
-      #settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+      settings.assertion_consumer_service_url     = "<your url>/users/saml/auth"
       settings.protocol_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-      settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:emailAddress" # "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
-      settings.issuer                             = "http://localhost:3000/users/saml/metadata"
+      settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
+      settings.issuer                             = "<your url>/users/saml/metadata"
       settings.authn_context                      = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
       settings.idp_slo_target_url                 = ""
       
       #line configuration
-      settings.idp_sso_target_url                 = "https://auth.worksmobile.com/saml2/idp/vebuin.com"
-      settings.idp_cert_fingerprint               = '5F:B3:E8:70:0E:93:B9:42:59:23:3C:39:B4:60:47:72:7D:D4:45:B0:B9:6A:87:A0:9A:F7:B4:C0:41:5F:6A:52'
+      settings.idp_sso_target_url                 = "<your auth url>"
+      settings.idp_cert_fingerprint               = '<your fingerprint of the certificate>'
       settings.idp_cert_fingerprint_algorithm     = 'http://www.w3.org/2000/09/xmldsig#sha256'
     end
 end
