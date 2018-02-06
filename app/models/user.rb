@@ -5,13 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 
   attr_accessor :login
-  validate :setUserID
-
-  def setUserID
-    if self.user_id.nil?
-      self.user_id = "999987"
-    end
-  end
 
   def login=(login)
     @login = login
