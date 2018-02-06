@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+you need to set your configuration in config/initializers/devise.rb
+(go to line number 318)
